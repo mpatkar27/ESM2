@@ -1,0 +1,40 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons">
+		<uxap:ObjectPageSection title="{i18n>RCPTAB.title}" id="RCP">
+	<uxap:ObjectPageSubSection>
+	<!--<IconTabFilter id="ictf5" text="{i18n>RCPTAB.title}" key="RCP" icon="sap-icon://table-view" design="Horizontal">-->
+	<!--	<content>-->
+			<Table fixedLayout="false" width="100%" id="recipetable" items="{/}">
+				<columns>
+					<Column>
+						<Text text="{i18n>rcp.itmtype}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>rcp.spec}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>rcp.desc}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>rcp.qty}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>rcp.uom}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{ITEM_TYPE}"/>
+							<Text text="{SUBID}"/>
+							<Text text="{SUBST_IDENT1}"/>
+							<Text text="{QUANT}"/>
+							<Text text="{UOM}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+	<!--	</content>-->
+	<!--</IconTabFilter>-->
+	</uxap:ObjectPageSubSection>
+	</uxap:ObjectPageSection>
+</core:FragmentDefinition>

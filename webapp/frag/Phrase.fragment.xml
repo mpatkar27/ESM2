@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:gramont="ESM2.control" xmlns:uxap="sap.uxap" xmlns="sap.m">
+	<uxap:ObjectPageSubSection title="" id="objsecphrase">
+	<!--<core:CustomData>-->
+		<!--<Panel expandable="true" headerText="{propModel>/title}" width="auto" class="sapUiResponsiveMargin" expanded="true">-->
+		<MessageStrip id="msgstrp" text="" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
+	<!--</core:CustomData>-->
+	</uxap:ObjectPageSubSection>
+	<!--</Panel>-->
+</core:FragmentDefinition>

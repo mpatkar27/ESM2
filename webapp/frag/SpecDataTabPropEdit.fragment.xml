@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m">
+	<uxap:ObjectPageSection title="{i18n>SpecDataTabProp.title.editable}" id="maintain" showTitle="false">
+		<!--<uxap:customAnchorBarButton>-->
+		<!--	<Button text="{i18n>SpecDataTabProp.title.editable}" icon="sap-icon://navigation-down-arrow" iconFirst="false"/>-->
+		<!--</uxap:customAnchorBarButton>-->
+		<!-- Content is created dynamically in controller. -->
+	</uxap:ObjectPageSection>
+</core:FragmentDefinition>

@@ -1,0 +1,99 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:gramont="ESM2.control" xmlns:uxap="sap.uxap" xmlns="sap.m">
+	<uxap:ObjectPageSection title="{i18n>SpecDetailIdentifierTab.tooltip}" id="ident">
+		<uxap:customAnchorBarButton>
+			<ToggleButton text="{i18n>SpecDetailIdentifierTab.tooltip}"/>
+		</uxap:customAnchorBarButton>
+		<uxap:ObjectPageSubSection >
+			<!--<IconTabFilter icon="sap-icon://blank-tag-2" tooltip="{i18n>SpecDetailIdentifierTab.tooltip}">-->
+			<Toolbar id="toolbar" design="Transparent">
+				<Label text="{i18n>SpecDetailIdentifierTab.table.header}"/>
+				<ToolbarSpacer/>
+				<Button id="toolbar.create" icon="sap-icon://add" press="_onCreate" enabled="{appModel>/editMode}"/>
+				<!--EXT_ID,TEST_ID-->
+				<Button icon="sap-icon://add-favorite" press="_onCreateDefault"
+					enabled="{parts: [{path: 'appModel>/editMode'}, {path: 'toolbarModel>/enableCreateDefault'}], formatter: '._formatCreateDefaultEnabled'}"/>
+			</Toolbar>
+		</uxap:ObjectPageSubSection >
+		<uxap:ObjectPageSubSection >
+			<ScrollContainer horizontal="true" vertical="false" class="gramontPlmSpecedit_Common_ScrollContainer">
+				<gramont:Table id="table" items="{/}" fixedLayout="false">
+					<gramont:columns>
+						<gramont:Column>
+							<Label text="{i18n>SpecDetailIdentifierTab.table.sort}" />
+						</gramont:Column>
+						<!--<gramont:Column>-->
+						<!--	<Label text="{i18n>SpecDetailIdentifierTab.table.idcat}" />-->
+						<!--</gramont:Column>-->
+						<gramont:Column>
+							<Label text="{i18n>SpecDetailIdentifierTab.table.idcatName}" />
+						</gramont:Column>
+						<!--<gramont:Column>-->
+						<!--	<Label text="{i18n>SpecDetailIdentifierTab.table.idtype}" />-->
+						<!--</gramont:Column>-->
+						<gramont:Column>
+							<Label text="{i18n>SpecDetailIdentifierTab.table.idtypeName}" />
+						</gramont:Column>
+						<gramont:Column>
+							<Label text="{i18n>SpecDetailIdentifierTab.table.id}" />
+						</gramont:Column>
+						<gramont:Column>
+							<Label text="{i18n>SpecDetailIdentifierTab.table.lang}" />
+						</gramont:Column>
+					</gramont:columns>
+					<gramont:items>
+						<gramont:ColumnListItem id="table.item">
+							<gramont:Field id="table.item.ord" editMode="{appModel>/editMode}">
+								<!-- EXT_ID -->
+								<gramont:display>
+									<Text wrapping="false" text="{ORD}"/>
+								</gramont:display>
+								<gramont:edit>
+									<Input width="4rem" value="{ORD}" maxLength="4"/>
+								</gramont:edit>
+							</gramont:Field>
+							<gramont:Field id="table.item.idtype" editMode="{appModel>/editMode}">
+								<!-- EXT_ID -->
+								<gramont:display>
+									<Text wrapping="false" text="{IDTYPE_NAME}"/>
+								</gramont:display>
+								<gramont:edit>
+									<Input width="9rem" value="{IDTYPE_NAME}" showValueHelp="true" valueHelpRequest="_onValueHelpRequest"/>
+								</gramont:edit>
+							</gramont:Field>
+							<!--<Text wrapping="false" text="{IDTYPE}"/>-->
+							<gramont:Field id="table.item.idcat" editMode="{appModel>/editMode}">
+								<!-- EXT_ID -->
+								<gramont:display>
+									<Text wrapping="false" text="{IDCAT_NAME}"/>
+								</gramont:display>
+								<gramont:edit>
+									<Input width="9rem" value="{IDCAT_NAME}" showValueHelp="true" valueHelpRequest="_onValueHelpRequest"/>
+								</gramont:edit>
+							</gramont:Field>
+							<!--<Text wrapping="false" text="{IDCAT}"/>-->
+							<gramont:Field id="table.item.ident" editMode="{appModel>/editMode}">
+								<!-- EXT_ID -->
+								<gramont:display>
+									<Text wrapping="false" text="{IDENT}"/>
+								</gramont:display>
+								<gramont:edit>
+									<Input width="20rem" value="{IDENT}" maxLength="132"/>
+								</gramont:edit>
+							</gramont:Field>
+							<gramont:Field id="table.item.langu" editMode="{appModel>/editMode}">
+								<!-- EXT_ID -->
+								<gramont:display>
+									<Text wrapping="false" text="{LANGU}"/>
+								</gramont:display>
+								<gramont:edit>
+									<Input width="5rem" value="{LANGU}" showValueHelp="true" maxLength="2" valueHelpRequest="_onValueHelpRequest"/>
+								</gramont:edit>
+							</gramont:Field>
+						</gramont:ColumnListItem>
+					</gramont:items>
+				</gramont:Table>
+			</ScrollContainer>
+		</uxap:ObjectPageSubSection >
+		<!--</IconTabFilter>-->
+	</uxap:ObjectPageSection>
+</core:FragmentDefinition>

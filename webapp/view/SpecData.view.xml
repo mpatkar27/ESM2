@@ -1,0 +1,72 @@
+<core:View id="SpecData" xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:f="sap.f" xmlns:gramont="ESM2.control"
+	xmlns:t="sap.ui.table" xmlns:u="sap.ui.unified" xmlns:c="sap.suite.ui.commons" controllerName="ESM2.controller.SpecData"
+	xmlns:l="sap.ui.layout">
+	<uxap:ObjectPageLayout id="ictb1" showTitleInHeaderContent="true" showEditHeaderButton="false" navigate="onnavtab" useIconTabBar="true"
+		headerContentPinnable="true">
+		<uxap:headerTitle>
+			<uxap:ObjectPageDynamicHeaderTitle>
+				<uxap:expandedHeading>
+					<VBox>
+						<Title id="t1" text="" wrapping="true"/>
+						<Text id="t3" text=""/>
+					</VBox>
+				</uxap:expandedHeading>
+				<uxap:snappedHeading>
+					<FlexBox fitContainer="true" alignItems="Center">
+						<Avatar id="icnspec" src="" class="sapUiTinyMarginEnd"/>
+						<!--<u:FileUploader id="icnupld2" icon="sap-icon://add" multiple="false" sendXHR="true" buttonText="Upload Image"-->
+						<!--	useMultipart="false" uploadComplete="_onUploadCompletelg" uploadOnChange="false" sameFilenameAllowed="true" change="_onupld" visible="false"/>-->
+						<Button text="{i18n>upldimg}" icon="sap-icon://add" id="icnupld2" press="_fileupld" type="Emphasized" visible="false"/>
+						<Title id="t2" text="" wrapping="true"/>
+					</FlexBox>
+				</uxap:snappedHeading>
+				<uxap:snappedContent>
+					<Text id="t4" text=""/>
+				</uxap:snappedContent>
+				<uxap:actions class="headertitlecls">
+					<Button id="header.adhocreport" icon="sap-icon://document-text" press="_onAdhocReport" enabled="{pageModel>/enablePage}"/>
+					<Image id="imglog" src="" height="70px" width="200px"/>
+				</uxap:actions>
+			</uxap:ObjectPageDynamicHeaderTitle>
+		</uxap:headerTitle>
+		<uxap:headerContent>
+			<FlexBox wrap="Wrap">
+				<l:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<Avatar id="icnspec1" class="sapUiSmallMarginEnd" src="" displaySize="L"/>
+					<!--<u:FileUploader id="icnupld1" buttonText="Upload Image" icon="sap-icon://add" multiple="false" sendXHR="true"-->
+					<!--	useMultipart="false" uploadComplete="_onUploadCompletelg" uploadOnChange="false" sameFilenameAllowed="true" change="_onupld" visible="false"/>-->
+					<Button text="{i18n>upldimg}"  icon="sap-icon://add" id="icnupld1" press="_fileupld" type="Emphasized" visible="false"/>
+				</l:VerticalLayout>
+				<l:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<Label text="Type:"/>
+					<Text id="txthd1" text=""/>
+				</l:VerticalLayout>
+				<l:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<Label text="Authorization Group:"/>
+					<Text id="txthd2" text=""/>
+				</l:VerticalLayout>
+				<l:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<Label text="Created On:"/>
+					<Text id="dpcreate" text=""/>
+				</l:VerticalLayout>
+				<l:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<Label text="Status:"/>
+					<Text id="txthd3" text=""/>
+				</l:VerticalLayout>
+				<l:VerticalLayout class="sapUiSmallMarginBeginEnd">
+					<Label text="Completion Progress:"/>
+					<ProgressIndicator id="completionind" class="sapUiSmallMarginBottom" displayValue="0%" state="Success" displayOnly="true"/>
+				</l:VerticalLayout>
+			</FlexBox>
+		</uxap:headerContent>
+		<uxap:sections ></uxap:sections>
+		<uxap:footer>
+			<OverflowToolbar id="tlb2" visible="true">
+				<ToolbarSpacer/>
+				<Button text="{i18n>dsave}" press="_onSave" type="Emphasized"/>
+				<Button text="{i18n>dsubm}" press="_onSaveSub" type="Emphasized"/>
+				<Button text="{i18n>dcan}" press="_onCancel" type="Transparent"/>
+			</OverflowToolbar>
+		</uxap:footer>
+	</uxap:ObjectPageLayout>
+</core:View>

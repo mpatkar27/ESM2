@@ -1,0 +1,38 @@
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m" controllerName="ESM2.controller.Main" displayBlock="true" xmlns:f="sap.ui.layout.form">
+	<App id="app">
+		<pages>
+			<Page id="page">
+				<content>
+					<Panel class="scrcnt">
+						<Text text="" width="90%" class="fnfrmthd"/>
+						<Image id="imglog" src="" height="70px" width="10%"/>
+					</Panel>
+					<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="upldform" editable="true" layout="ResponsiveGridLayout" title="Please select existing specification or create a new one"
+							labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4"
+							emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1">
+							<Label text="Specification Search:" labelFor="spec"/>
+							<Input id="spec" placeholder="Enter Specification Number" showValueHelp="true" valueHelpRequest="_OnValHelpReq" change="_onChangespec"/>
+						</f:SimpleForm>
+					</VBox>
+					<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="upldform2" editable="true" layout="ResponsiveGridLayout" title="Please provide Specification Information" labelSpanXL="3"
+							labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+							columnsXL="1" columnsL="1" columnsM="1">
+							<Label text="Specification Type" labelFor="inpdesc1"/>
+							<Input id="inpdesc1" placeholder="Enter Specification Type" showValueHelp="true" valueHelpRequest="_OnValHelpReq" change="_onChangespectyp"/>
+							<Label text="Authorization Group" labelFor="mat1"/>
+							<Input id="mat1" placeholder="Enter Authorization Group" showValueHelp="true" valueHelpRequest="_OnValHelpReq" change="_onChangeauth"/>
+						</f:SimpleForm>
+					</VBox>
+				</content>
+				<footer>
+					<OverflowToolbar>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://open-command-field" text="Open Specification" type="Accept" press="_oncrtnwspec"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</core:View>

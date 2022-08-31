@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:upload="sap.m.upload" xmlns:u="sap.ui.unified">
+	<Dialog title="{i18n>specimage.title}" id="specdiag" class="sapUiResponsiveContentPadding" resizable="true" contentHeight="20%" contentWidth="20%">
+		<content>
+			<u:FileUploader id="icnupld123" icon="sap-icon://add" multiple="false" sendXHR="true" placeholder="{i18n>specplace}" useMultipart="false"
+				uploadComplete="_onUploadCompletelg" uploadOnChange="false" sameFilenameAllowed="true" change="_onupld"/>
+		</content>
+		<buttons>
+			<Button id="upldbtn" text="{i18n>Ok}" press="_onClosespecimg"/>
+			<Button id="clsbtn" text="{i18n>cls}" press="_onClosespecimg"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
