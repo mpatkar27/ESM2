@@ -1,355 +1,525 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons">
-	<uxap:ObjectPageSection title="QAS" id="QASsec">
-				<uxap:customAnchorBarButton>
-			<ToggleButton text="QAS"/>
+	<uxap:ObjectPageSection title="Pallete Scheme" id="QASsec">
+		<uxap:customAnchorBarButton>
+			<ToggleButton text="Pallete Scheme"/>
 		</uxap:customAnchorBarButton>
 		<uxap:ObjectPageSubSection>
-			<Table noDataText="" id="table0">
+			<Image xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons"
+				src="{imageModel>/path}/QAS_images/Pallete.png" width="597px" height="289px" id="image0"/>
+		</uxap:ObjectPageSubSection>
+		<uxap:ObjectPageSubSection>
+			<Table noDataText="Drop column list items here and columns in the area above" id="table1">
 				<items>
 					<ColumnListItem type="Active" id="item1">
 						<cells>
-							<Text text="Product Name" id="text11"/>
-							<Text text="Yum Yum" id="text12"/>
-							<Text text="Row 1 Cell 3" id="text13"/></cells>
+							<Text id="text7" text="Dimensions L X H X W"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy"/>
+							<Text text="Dimension L x W x H" id="text8"/>
+							<Text text="191 x 145 x 192 mm" id="text9"/></cells>
+					</ColumnListItem>
+					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy">
+						<cells>
+							<Text id="text7_copy" text="Filling Volume of SMU"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy2"/>
+							<Text text="Numbers of SP1 in SHU" id="text8_copy"/>
+							<Text id="text9_copy3"/>
+						</cells>
 					</ColumnListItem>
 					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy2">
 						<cells>
-							<Text text="EPOS Name" id="text11_copy2"/>
-							<Text text="YUM YUM" id="text12_copy2"/>
-							<Text text="Row 1 Cell 3" id="text13_copy2"/>
+							<Text id="text7_copy2" text="Filling Weight of SMU"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy4"/>
+							<Text text="Numbers of CON in SHU" id="text8_copy2"/>
+							<Text text="12" id="text9_copy5"/>
 						</cells>
 					</ColumnListItem>
 					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy3">
 						<cells>
-							<Text text="EPOS Code" id="text11_copy3"/>
-							<Text text="3424 spec" id="text12_copy3"/>
-							<Text text="Row 1 Cell 3" id="text13_copy3"/>
+							<Text id="text7_copy3" text="Tare Weight SMU"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy6"/>
+							<Text text="Tare Weight SHU" id="text8_copy3"/>
+							<Text text="0,102 Kg" id="text9_copy7"/>
 						</cells>
 					</ColumnListItem>
 					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy4">
 						<cells>
-							<Text text="Greggs Manufacturing Site" id="text11_copy4"/>
-							<Text text="Clydesmil" id="text12_copy4"/>
-							<Text text="Row 1 Cell 3" id="text13_copy4"/>
+							<Text id="text7_copy4" text="Gross Weight SMU"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy8"/>
+							<Text text="Gross Weight SHU" id="text8_copy4"/>
+							<Text text="1,626 Kg" id="text9_copy9"/>
 						</cells>
 					</ColumnListItem>
 					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy5">
 						<cells>
-							<Text text="Product Name" id="text11_copy5"/>
-							<Text text="Yum Yum" id="text12_copy5"/>
-							<Breadcrumbs xmlns="sap.m" currentLocationText="Location" id="breadcrumbs0">
-								<Link text="Level 1"/>
-								<Link text="Level 2"/>
-							</Breadcrumbs>
-							<Text text="Row 1 Cell 3" id="text13_copy5"/>
+							<Text id="text7_copy5" text="Packaging Volume"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy10"/>
+							<Text text="Packaging Volume1 Cell 2" id="text8_copy5"/>
+							<Text text="5,312 dm3" id="text9_copy11"/>
 						</cells>
 					</ColumnListItem>
-					<ColumnListItem id="item1_1658496675608">
+					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy6">
 						<cells>
-							<Label text="Product Shelf Life" id="label0"/>
-							<FlexBox width="100%" id="box0">
-								<items>
-									<Table noDataText="Drop column list items here and columns in the area above" id="table1">
-										<items>
-											<ColumnListItem type="Active" id="item3">
-												<cells>
-													<Text id="text16" text="Storage Life form Production"/>
-													<Text text="Minimum Storage on Delivery" id="text17"/>
-													<Text text="Storage Life once Open" id="text18"/></cells>
-											</ColumnListItem>
-											<ColumnListItem id="item4">
-												<cells>
-													<Label id="label7" text="P + 28 frozen"/>
-													<Label width="100%" id="label8" text="P + 14 (frozen)"/>
-													<Label text="N/A" width="100%" id="label9"/>
-												</cells>
-											</ColumnListItem>
-											<ColumnListItem id="item5">
-												<cells>
-													<Label text="Life in Shop" id="label10"/>
-												</cells>
-											</ColumnListItem>
-										</items>
-										<columns>
-											<Column id="column7"></Column>
-											<Column id="column8"></Column>
-											<Column id="column9"></Column>
-										</columns>
-									</Table>
-								</items>
-							</FlexBox>
-						</cells>
-					</ColumnListItem>
-					<ColumnListItem id="item7">
-						<cells>
-							<Text xmlns="sap.m" id="text19"/>
-							<Text xmlns="sap.m" text="Day of defrost + 1 day Finished product in counter or boxed" id="text20"/>
-						</cells>
-					</ColumnListItem>
-					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" id="item7_copy">
-						<cells>
-							<Text xmlns="sap.m" id="text19_copy" text="Storage Conditions Please tick "/>
-							<FlexBox xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" width="100%" id="box0_copy">
-								<items>
-									<Table noDataText="Drop column list items here and columns in the area above" id="table1_copy">
-										<items>
-											<ColumnListItem type="Active" id="item3_copy">
-												<cells>
-													<Text id="text16_copy" text="Chill to 5 C"/>
-													<Text text="Deep Chill-2 to 0 C" id="text17_copy"/>
-													<Text text="Frozen &lt;-18 C" id="text18_copy"/>
-													<Text xmlns="sap.m" id="text21" text="Ambient"/>
-												</cells>
-											</ColumnListItem>
-											<ColumnListItem id="item4_copy">
-												<cells>
-													<Label id="label7_copy"/>
-													<Label width="100%" id="label8_copy"/>
-													<Label width="100%" id="label9_copy" text="X"/>
-													<Label width="100%" id="label13"/>
-												</cells>
-											</ColumnListItem>
-										</items>
-										<columns>
-											<Column id="column7_copy"></Column>
-											<Column id="column8_copy"></Column>
-											<Column id="column9_copy"></Column>
-										</columns>
-									</Table>
-								</items>
-							</FlexBox>
-						</cells>
-					</ColumnListItem>
-					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" id="item7_copy2">
-						<cells>
-							<Text xmlns="sap.m" id="text19_copy2" text="Distribution Conditions Please tick"/>
-							<FlexBox xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" width="100%" id="box0_copy2">
-								<items>
-									<Table noDataText="Drop column list items here and columns in the area above" id="table1_copy2">
-										<items>
-											<ColumnListItem type="Active" id="item3_copy2">
-												<cells>
-													<Text id="text16_copy2" text="Chill to 5 C"/>
-													<Text text="Deep Chill-2 to 0 C" id="text17_copy2"/>
-													<Text text="Frozen &lt;-18 C" id="text18_copy2"/>
-													<Text xmlns="sap.m" id="text21_copy" text="Ambient"/>
-												</cells>
-											</ColumnListItem>
-											<ColumnListItem id="item4_copy2">
-												<cells>
-													<Label id="label7_copy2"/>
-													<Label width="100%" id="label8_copy2"/>
-													<Label width="100%" id="label9_copy2"/>
-													<Label text="X" width="100%" id="label13_copy"/>
-												</cells>
-											</ColumnListItem>
-										</items>
-										<columns>
-											<Column id="column7_copy2"></Column>
-											<Column id="column8_copy2"></Column>
-											<Column id="column9_copy2"></Column>
-										</columns>
-									</Table>
-								</items>
-							</FlexBox>
-						</cells>
-					</ColumnListItem>
-					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="item1_1658496675608_copy">
-						<cells>
-							<Text xmlns="sap.m" text="Product Weight/Tolerance (g)" id="text11_1658500997557"/>
-							<FlexBox xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" width="100%" id="box0_copy3">
-								<items>
-									<Table noDataText="Drop column list items here and columns in the area above" id="table1_copy3" growing="true">
-										<items>
-											<ColumnListItem type="Active" id="item3_copy3">
-												<cells>
-													<Text id="text16_copy3" text="Target (Green)" class="colhdgr"/>
-													<Text text="Out of specification (Red)" id="text17_copy3" class="colhdrd"/>
-												</cells>
-											</ColumnListItem>
-											<ColumnListItem id="item4_copy3">
-												<cells>
-													<Label id="label7_copy3" text="75.2g+/-10g"/>
-													<Label width="100%" id="label8_copy3" text="&lt;65.2g or &gt;85.2g"/>
-												</cells>
-											</ColumnListItem>
-										</items>
-										<columns>
-											<Column id="column7_copy3"></Column>
-											<Column id="column8_copy3"></Column>
-											<Column id="column9_copy3"></Column>
-										</columns>
-									</Table>
-								</items>
-							</FlexBox>
+							<Text id="text7_copy6"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy12"/>
+							<Text text="Pieces" id="text8_copy6"/>
+							<Text text="0,443 dm3 | 0,136 Kg" id="text9_copy13"/>
 						</cells>
 					</ColumnListItem>
 				</items>
 				<columns>
-					<Column id="column2" width="20%"></Column>
-					<Column id="column3"></Column>
-				</columns>
-			</Table>
-		</uxap:ObjectPageSubSection>
-		<uxap:ObjectPageSubSection>
-			<MessageStrip xmlns="sap.m" text="*Minimum 4 yum yum should be assessed when reviewing product " showIcon="false" id="strip0"></MessageStrip>
-		</uxap:ObjectPageSubSection>
-		<uxap:ObjectPageSubSection>
-			<Title xmlns="sap.m" text="Finished Product Standards in Packaging" id="title0"/>
-		</uxap:ObjectPageSubSection>
-		<uxap:ObjectPageSubSection>
-			<Table noDataText="Drop column list items here and columns in the area above" id="table0_1658501206398">
-				<items>
-					<ColumnListItem type="Active" id="item0">
-						<cells>
-							<Text text="Product Photography" id="text2"/>
-							<VBox width="100%" direction="Column" id="vbox0">
-								<items>
-									<Image width="140px" src="{imageModel>/path}/QAS_images/1.jpg" height="140px" id="image0"/>
-									<Image src="{imageModel>/path}/QAS_images/2.jpg" width="140px" height="140px" id="image1"/>
-									<Image xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" src="{imageModel>/path}/QAS_images/3.jpg" width="140px"
-										height="140px" id="image1_copy2"/>
-									<Image xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" src="{imageModel>/path}/QAS_images/4.jpg" width="140px"
-										height="140px" id="image1_copy"/>
-								</items>
-							</VBox>
-							<VBox width="100%" direction="Column" id="vbox1">
-								<items>
-									<Image src="{imageModel>/path}/QAS_images/5.png" width="140px" height="140px" id="image2"/>
-									<Image xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" src="{imageModel>/path}/QAS_images/6.png" width="140px"
-										height="140px" id="image2_copy"/>
-								</items>
-							</VBox>
-						</cells>
-					</ColumnListItem>
-					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" type="Active" id="item0_copy">
-						<cells>
-							<Text text="Coding/Label Photography " id="text2_copy"/>
-							<VBox width="100%" direction="Column" id="vbox0_copy">
-								<items>
-									<Image src="{imageModel>/path}/QAS_images/7.png" width="140px" height="140px" id="image0_copy"/>
-								</items>
-							</VBox>
-							<VBox width="100%" direction="Column" id="vbox1_copy">
-								<items>
-									<Image src="{imageModel>/path}/QAS_images/8.png" width="140px" height="140px" id="image2_copy2"/>
-								</items>
-							</VBox>
-						</cells>
-					</ColumnListItem>
-					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" type="Active" id="item0_copy2">
-						<cells>
-							<Text text="Packaging Layout- Blue Tray / Outercase Photograph" id="text2_copy2"/>
-							<VBox width="100%" direction="Column" id="vbox0_copy2">
-								<items>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"
-										text="Blue plastic tray. 10 boxes per tray" id="text5"/>
-									<Image src="{imageModel>/path}/QAS_images/9.png" width="140px" height="140px" id="image0_copy2"/>
-								</items>
-							</VBox>
-							<VBox width="100%" direction="Column" id="vbox1_copy2">
-								<items>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"
-										text="Less or more than 10 boxes per blue plastic tray" id="text6"/>
-									<Image src="{imageModel>/path}/QAS_images/10.png" width="140px" height="140px" id="image2_copy3"/>
-								</items>
-							</VBox>
-						</cells>
-					</ColumnListItem>
-					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" type="Active" id="item0_copy3">
-						<cells>
-							<Text text="Description of packaging" id="text2_copy3"/>
-							<VBox width="100%" direction="Column" id="vbox0_copy3">
-								<items>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="White yum yum box base "
-										id="text5_copy"/>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="2 yum yum per box " id="text5_copy2"/>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="Yum Yum should be facing upwards"
-										id="text5_copy3"/>
-									<Image src="{imageModel>/path}/QAS_images/11.jpg" width="140px" height="140px" id="image0_copy3"/>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="Lid applied in shop "
-										id="text5_copy4"/>
-									<Image xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" src="{imageModel>/path}/QAS_images/12.png" xmlns="sap.m" width="140px"
-										height="140px" id="image0_copy4"/>
-								</items>
-							</VBox>
-							<VBox width="100%" direction="Column" id="vbox1_copy3">
-								<items>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="No white yum yum box base"
-										id="text6_copy"/>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"
-										text="Less than 2 or more than 2 yum yums per box " id="text6_copy3"/>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="Yum yum upside down"
-										id="text6_copy2"/>
-									<HBox width="100%" id="hbox0">
-										<items>
-											<Image src="{imageModel>/path}/QAS_images/13.png" width="140px" height="140px" id="image3"/>
-											<Image xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" src="{imageModel>/path}/QAS_images/14.png" width="140px"
-												height="140px" id="image3_copy"/>
-										</items>
-									</HBox>
-									<Image src="{imageModel>/path}/QAS_images/15.png" width="140px" height="140px" id="image0_1658502613517"/>
-								</items>
-							</VBox>
-						</cells>
-					</ColumnListItem>
-					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" type="Active" id="item0_copy4">
-						<cells>
-							<Text text="Position of stickers/labels" id="text2_copy4"/>
-							<VBox width="100%" direction="Column" id="vbox0_copy4">
-								<items>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"
-										text="Tray label printer clearly and positioned on left hand side of short side of blue tray in designated area " id="text5_copy5"/>
-								</items>
-							</VBox>
-							<VBox width="100%" direction="Column" id="vbox1_copy4">
-								<items>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="No label on blue trays"
-										id="text6_copy4"/>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"
-										text="Label stuck on wrong side of blue tray " id="text6_copy5"/>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="Label damaged or unclear "
-										id="text6_copy6"/>
-								</items>
-							</VBox>
-						</cells>
-					</ColumnListItem>
-					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" type="Active" id="item0_copy5">
-						<cells>
-							<Text text="Date code format " id="text2_copy5"/>
-							<VBox width="100%" direction="Column" id="vbox0_copy5">
-								<items>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="Best Before Date" id="text5_copy6"/>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="DD/MM/YY" id="text5_copy7"/>
-								</items>
-							</VBox>
-							<VBox width="100%" direction="Column" id="vbox1_copy5">
-								<items>
-									<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"
-										text="Format layout incorrect or best before not used" id="text6_copy7"/>
-								</items>
-							</VBox>
-						</cells>
-					</ColumnListItem>
-				</items>
-				<columns>
-					<Column id="column0">
+					<Column id="column3">
 						<header>
-							<Label text="Attribute" id="label0_1658501206396"/>
+							<Label text="Smallest Unit" id="label3"/>
 						</header>
 					</Column>
-					<Column id="column1" >
-						<header >
-							<Label text="Target (Green)" id="label1" class="colhdgr"/>
+					<Column id="column4">
+						<header>
+							<Label text="SMU" id="label4"/>
 						</header>
 					</Column>
-					<Column id="column2_1658501206398" >
-						<header >
-							<Label id="label2" text="Out of Specification(Red)" class="colhdrd"/>
+					<Column id="column5">
+						<header>
+							<Label text="Shipping Unit" id="label5"/>
+						</header>
+					</Column>
+					<Column id="column6">
+						<header>
+							<Text text="SHU | 1SHU = 12 CON" id="text10"/>
 						</header>
 					</Column>
 				</columns>
 			</Table>
+		</uxap:ObjectPageSubSection>
+		<uxap:ObjectPageSubSection>
+			<Table xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"
+				noDataText="Drop column list items here and columns in the area above" id="table1_copy">
+				<items>
+					<ColumnListItem type="Active" id="item1_copy7">
+						<cells>
+							<Text id="text7_copy7" text="Dimensions L X W X H"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy14" text="45 x 45 x 178 mm"/>
+							<Text text="Dimension L x W x H" id="text8_copy7"/>
+							<Text text="1199 x 773 x 192 mm" id="text9_copy15"/>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy8">
+						<cells>
+							<Text id="text7_copy8" text="Number of SMU in CON"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy16" text="1"/>
+							<Text text="Numbers of SHU / LEV" id="text8_copy8"/>
+							<Text id="text9_copy17" text="33"/>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy9">
+						<cells>
+							<Text id="text7_copy9" text="Filling Volume of CON"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy18" text="150ml"/>
+							<Text text="Numbers of SP1 / LEV" id="text8_copy9"/>
+							<Text id="text9_copy19"/>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy10">
+						<cells>
+							<Text id="text7_copy10" text="Filling Weight of CON"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy20" text="94 g"/>
+							<Text text="Number of CON / LEV" id="text8_copy10"/>
+							<Text text="396" id="text9_copy21"/>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy11">
+						<cells>
+							<Text id="text7_copy11" text="Tare weight CON"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy22" text="33 g"/>
+							<Text text="Gross Weight of LEV" id="text8_copy11"/>
+							<Text text="53,658 Kg" id="text9_copy23"/>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy12">
+						<cells>
+							<Text id="text7_copy12" text="Gross Weight CON"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy24" text="127 g"/>
+							<Text text="Packaging Volume" id="text8_copy12"/>
+							<Text text="177,951dm3" id="text9_copy25"/>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy13">
+						<cells>
+							<Text id="text7_copy13" text="Facing of CON"/>
+							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="text9_copy26" text="45mm"/>
+							<Text id="text8_copy13"/>
+							<Text id="text9_copy27"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+				<columns>
+					<Column id="column3_copy">
+						<header>
+							<Label text="Consumer Unit" id="label3_copy"/>
+						</header>
+					</Column>
+					<Column id="column4_copy">
+						<header>
+							<Label text="CON | 1 SMU = 1 CON" id="label4_copy"/>
+						</header>
+					</Column>
+					<Column id="column5_copy">
+						<header>
+							<Label text="Pallet Layer" id="label5_copy"/>
+						</header>
+					</Column>
+					<Column id="column6_copy">
+						<header>
+							<Text text="LEV | 1LEV = 396 CON" id="text10_copy"/>
+						</header>
+					</Column>
+				</columns>
+			</Table>
+			<!--	<Table noDataText="" id="table0">-->
+			<!--		<items>-->
+			<!--			<ColumnListItem type="Active" id="item1">-->
+			<!--				<cells>-->
+			<!--					<Text text="Product Name" id="text11"/>-->
+			<!--					<Text text="Yum Yum" id="text12"/>-->
+			<!--					<Text text="Row 1 Cell 3" id="text13"/></cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy2">-->
+			<!--				<cells>-->
+			<!--					<Text text="EPOS Name" id="text11_copy2"/>-->
+			<!--					<Text text="YUM YUM" id="text12_copy2"/>-->
+			<!--					<Text text="Row 1 Cell 3" id="text13_copy2"/>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy3">-->
+			<!--				<cells>-->
+			<!--					<Text text="EPOS Code" id="text11_copy3"/>-->
+			<!--					<Text text="3424 spec" id="text12_copy3"/>-->
+			<!--					<Text text="Row 1 Cell 3" id="text13_copy3"/>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy4">-->
+			<!--				<cells>-->
+			<!--					<Text text="Greggs Manufacturing Site" id="text11_copy4"/>-->
+			<!--					<Text text="Clydesmil" id="text12_copy4"/>-->
+			<!--					<Text text="Row 1 Cell 3" id="text13_copy4"/>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" type="Active" id="item1_copy5">-->
+			<!--				<cells>-->
+			<!--					<Text text="Product Name" id="text11_copy5"/>-->
+			<!--					<Text text="Yum Yum" id="text12_copy5"/>-->
+			<!--					<Breadcrumbs xmlns="sap.m" currentLocationText="Location" id="breadcrumbs0">-->
+			<!--						<Link text="Level 1"/>-->
+			<!--						<Link text="Level 2"/>-->
+			<!--					</Breadcrumbs>-->
+			<!--					<Text text="Row 1 Cell 3" id="text13_copy5"/>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem id="item1_1658496675608">-->
+			<!--				<cells>-->
+			<!--					<Label text="Product Shelf Life" id="label0"/>-->
+			<!--					<FlexBox width="100%" id="box0">-->
+			<!--						<items>-->
+			<!--							<Table noDataText="Drop column list items here and columns in the area above" id="table1">-->
+			<!--								<items>-->
+			<!--									<ColumnListItem type="Active" id="item3">-->
+			<!--										<cells>-->
+			<!--											<Text id="text16" text="Storage Life form Production"/>-->
+			<!--											<Text text="Minimum Storage on Delivery" id="text17"/>-->
+			<!--											<Text text="Storage Life once Open" id="text18"/></cells>-->
+			<!--									</ColumnListItem>-->
+			<!--									<ColumnListItem id="item4">-->
+			<!--										<cells>-->
+			<!--											<Label id="label7" text="P + 28 frozen"/>-->
+			<!--											<Label width="100%" id="label8" text="P + 14 (frozen)"/>-->
+			<!--											<Label text="N/A" width="100%" id="label9"/>-->
+			<!--										</cells>-->
+			<!--									</ColumnListItem>-->
+			<!--									<ColumnListItem id="item5">-->
+			<!--										<cells>-->
+			<!--											<Label text="Life in Shop" id="label10"/>-->
+			<!--										</cells>-->
+			<!--									</ColumnListItem>-->
+			<!--								</items>-->
+			<!--								<columns>-->
+			<!--									<Column id="column7"></Column>-->
+			<!--									<Column id="column8"></Column>-->
+			<!--									<Column id="column9"></Column>-->
+			<!--								</columns>-->
+			<!--							</Table>-->
+			<!--						</items>-->
+			<!--					</FlexBox>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem id="item7">-->
+			<!--				<cells>-->
+			<!--					<Text xmlns="sap.m" id="text19"/>-->
+			<!--					<Text xmlns="sap.m" text="Day of defrost + 1 day Finished product in counter or boxed" id="text20"/>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" id="item7_copy">-->
+			<!--				<cells>-->
+			<!--					<Text xmlns="sap.m" id="text19_copy" text="Storage Conditions Please tick "/>-->
+			<!--					<FlexBox xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" width="100%" id="box0_copy">-->
+			<!--						<items>-->
+			<!--							<Table noDataText="Drop column list items here and columns in the area above" id="table1_copy">-->
+			<!--								<items>-->
+			<!--									<ColumnListItem type="Active" id="item3_copy">-->
+			<!--										<cells>-->
+			<!--											<Text id="text16_copy" text="Chill to 5 C"/>-->
+			<!--											<Text text="Deep Chill-2 to 0 C" id="text17_copy"/>-->
+			<!--											<Text text="Frozen &lt;-18 C" id="text18_copy"/>-->
+			<!--											<Text xmlns="sap.m" id="text21" text="Ambient"/>-->
+			<!--										</cells>-->
+			<!--									</ColumnListItem>-->
+			<!--									<ColumnListItem id="item4_copy">-->
+			<!--										<cells>-->
+			<!--											<Label id="label7_copy"/>-->
+			<!--											<Label width="100%" id="label8_copy"/>-->
+			<!--											<Label width="100%" id="label9_copy" text="X"/>-->
+			<!--											<Label width="100%" id="label13"/>-->
+			<!--										</cells>-->
+			<!--									</ColumnListItem>-->
+			<!--								</items>-->
+			<!--								<columns>-->
+			<!--									<Column id="column7_copy"></Column>-->
+			<!--									<Column id="column8_copy"></Column>-->
+			<!--									<Column id="column9_copy"></Column>-->
+			<!--								</columns>-->
+			<!--							</Table>-->
+			<!--						</items>-->
+			<!--					</FlexBox>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" id="item7_copy2">-->
+			<!--				<cells>-->
+			<!--					<Text xmlns="sap.m" id="text19_copy2" text="Distribution Conditions Please tick"/>-->
+			<!--					<FlexBox xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" width="100%" id="box0_copy2">-->
+			<!--						<items>-->
+			<!--							<Table noDataText="Drop column list items here and columns in the area above" id="table1_copy2">-->
+			<!--								<items>-->
+			<!--									<ColumnListItem type="Active" id="item3_copy2">-->
+			<!--										<cells>-->
+			<!--											<Text id="text16_copy2" text="Chill to 5 C"/>-->
+			<!--											<Text text="Deep Chill-2 to 0 C" id="text17_copy2"/>-->
+			<!--											<Text text="Frozen &lt;-18 C" id="text18_copy2"/>-->
+			<!--											<Text xmlns="sap.m" id="text21_copy" text="Ambient"/>-->
+			<!--										</cells>-->
+			<!--									</ColumnListItem>-->
+			<!--									<ColumnListItem id="item4_copy2">-->
+			<!--										<cells>-->
+			<!--											<Label id="label7_copy2"/>-->
+			<!--											<Label width="100%" id="label8_copy2"/>-->
+			<!--											<Label width="100%" id="label9_copy2"/>-->
+			<!--											<Label text="X" width="100%" id="label13_copy"/>-->
+			<!--										</cells>-->
+			<!--									</ColumnListItem>-->
+			<!--								</items>-->
+			<!--								<columns>-->
+			<!--									<Column id="column7_copy2"></Column>-->
+			<!--									<Column id="column8_copy2"></Column>-->
+			<!--									<Column id="column9_copy2"></Column>-->
+			<!--								</columns>-->
+			<!--							</Table>-->
+			<!--						</items>-->
+			<!--					</FlexBox>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" id="item1_1658496675608_copy">-->
+			<!--				<cells>-->
+			<!--					<Text xmlns="sap.m" text="Product Weight/Tolerance (g)" id="text11_1658500997557"/>-->
+			<!--					<FlexBox xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" width="100%" id="box0_copy3">-->
+			<!--						<items>-->
+			<!--							<Table noDataText="Drop column list items here and columns in the area above" id="table1_copy3" growing="true">-->
+			<!--								<items>-->
+			<!--									<ColumnListItem type="Active" id="item3_copy3">-->
+			<!--										<cells>-->
+			<!--											<Text id="text16_copy3" text="Target (Green)" class="colhdgr"/>-->
+			<!--											<Text text="Out of specification (Red)" id="text17_copy3" class="colhdrd"/>-->
+			<!--										</cells>-->
+			<!--									</ColumnListItem>-->
+			<!--									<ColumnListItem id="item4_copy3">-->
+			<!--										<cells>-->
+			<!--											<Label id="label7_copy3" text="75.2g+/-10g"/>-->
+			<!--											<Label width="100%" id="label8_copy3" text="&lt;65.2g or &gt;85.2g"/>-->
+			<!--										</cells>-->
+			<!--									</ColumnListItem>-->
+			<!--								</items>-->
+			<!--								<columns>-->
+			<!--									<Column id="column7_copy3"></Column>-->
+			<!--									<Column id="column8_copy3"></Column>-->
+			<!--									<Column id="column9_copy3"></Column>-->
+			<!--								</columns>-->
+			<!--							</Table>-->
+			<!--						</items>-->
+			<!--					</FlexBox>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--		</items>-->
+			<!--		<columns>-->
+			<!--			<Column id="column2" width="20%"></Column>-->
+			<!--			<Column id="column3"></Column>-->
+			<!--		</columns>-->
+			<!--	</Table>-->
+			<!--</uxap:ObjectPageSubSection>-->
+			<!--<uxap:ObjectPageSubSection>-->
+			<!--	<MessageStrip xmlns="sap.m" text="*Minimum 4 yum yum should be assessed when reviewing product " showIcon="false" id="strip0"></MessageStrip>-->
+			<!--</uxap:ObjectPageSubSection>-->
+			<!--<uxap:ObjectPageSubSection>-->
+			<!--	<Title xmlns="sap.m" text="Finished Product Standards in Packaging" id="title0"/>-->
+			<!--</uxap:ObjectPageSubSection>-->
+			<!--<uxap:ObjectPageSubSection>-->
+			<!--	<Table noDataText="Drop column list items here and columns in the area above" id="table0_1658501206398">-->
+			<!--		<items>-->
+			<!--			<ColumnListItem type="Active" id="item0">-->
+			<!--				<cells>-->
+			<!--					<Text text="Product Photography" id="text2"/>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox0">-->
+			<!--						<items>-->
+			<!--							<Image width="140px" src="{imageModel>/path}/QAS_images/1.jpg" height="140px" id="image0"/>-->
+			<!--							<Image src="{imageModel>/path}/QAS_images/2.jpg" width="140px" height="140px" id="image1"/>-->
+			<!--							<Image xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" src="{imageModel>/path}/QAS_images/3.jpg" width="140px"-->
+			<!--								height="140px" id="image1_copy2"/>-->
+			<!--							<Image xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" src="{imageModel>/path}/QAS_images/4.jpg" width="140px"-->
+			<!--								height="140px" id="image1_copy"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox1">-->
+			<!--						<items>-->
+			<!--							<Image src="{imageModel>/path}/QAS_images/5.png" width="140px" height="140px" id="image2"/>-->
+			<!--							<Image xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" src="{imageModel>/path}/QAS_images/6.png" width="140px"-->
+			<!--								height="140px" id="image2_copy"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" type="Active" id="item0_copy">-->
+			<!--				<cells>-->
+			<!--					<Text text="Coding/Label Photography " id="text2_copy"/>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox0_copy">-->
+			<!--						<items>-->
+			<!--							<Image src="{imageModel>/path}/QAS_images/7.png" width="140px" height="140px" id="image0_copy"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox1_copy">-->
+			<!--						<items>-->
+			<!--							<Image src="{imageModel>/path}/QAS_images/8.png" width="140px" height="140px" id="image2_copy2"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" type="Active" id="item0_copy2">-->
+			<!--				<cells>-->
+			<!--					<Text text="Packaging Layout- Blue Tray / Outercase Photograph" id="text2_copy2"/>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox0_copy2">-->
+			<!--						<items>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"-->
+			<!--								text="Blue plastic tray. 10 boxes per tray" id="text5"/>-->
+			<!--							<Image src="{imageModel>/path}/QAS_images/9.png" width="140px" height="140px" id="image0_copy2"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox1_copy2">-->
+			<!--						<items>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"-->
+			<!--								text="Less or more than 10 boxes per blue plastic tray" id="text6"/>-->
+			<!--							<Image src="{imageModel>/path}/QAS_images/10.png" width="140px" height="140px" id="image2_copy3"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" type="Active" id="item0_copy3">-->
+			<!--				<cells>-->
+			<!--					<Text text="Description of packaging" id="text2_copy3"/>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox0_copy3">-->
+			<!--						<items>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="White yum yum box base "-->
+			<!--								id="text5_copy"/>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="2 yum yum per box " id="text5_copy2"/>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="Yum Yum should be facing upwards"-->
+			<!--								id="text5_copy3"/>-->
+			<!--							<Image src="{imageModel>/path}/QAS_images/11.jpg" width="140px" height="140px" id="image0_copy3"/>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="Lid applied in shop "-->
+			<!--								id="text5_copy4"/>-->
+			<!--							<Image xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" src="{imageModel>/path}/QAS_images/12.png" xmlns="sap.m" width="140px"-->
+			<!--								height="140px" id="image0_copy4"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox1_copy3">-->
+			<!--						<items>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="No white yum yum box base"-->
+			<!--								id="text6_copy"/>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"-->
+			<!--								text="Less than 2 or more than 2 yum yums per box " id="text6_copy3"/>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="Yum yum upside down"-->
+			<!--								id="text6_copy2"/>-->
+			<!--							<HBox width="100%" id="hbox0">-->
+			<!--								<items>-->
+			<!--									<Image src="{imageModel>/path}/QAS_images/13.png" width="140px" height="140px" id="image3"/>-->
+			<!--									<Image xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" src="{imageModel>/path}/QAS_images/14.png" width="140px"-->
+			<!--										height="140px" id="image3_copy"/>-->
+			<!--								</items>-->
+			<!--							</HBox>-->
+			<!--							<Image src="{imageModel>/path}/QAS_images/15.png" width="140px" height="140px" id="image0_1658502613517"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" type="Active" id="item0_copy4">-->
+			<!--				<cells>-->
+			<!--					<Text text="Position of stickers/labels" id="text2_copy4"/>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox0_copy4">-->
+			<!--						<items>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"-->
+			<!--								text="Tray label printer clearly and positioned on left hand side of short side of blue tray in designated area " id="text5_copy5"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox1_copy4">-->
+			<!--						<items>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="No label on blue trays"-->
+			<!--								id="text6_copy4"/>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"-->
+			<!--								text="Label stuck on wrong side of blue tray " id="text6_copy5"/>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="Label damaged or unclear "-->
+			<!--								id="text6_copy6"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--			<ColumnListItem xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:c="sap.suite.ui.commons" type="Active" id="item0_copy5">-->
+			<!--				<cells>-->
+			<!--					<Text text="Date code format " id="text2_copy5"/>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox0_copy5">-->
+			<!--						<items>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="Best Before Date" id="text5_copy6"/>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m" text="DD/MM/YY" id="text5_copy7"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--					<VBox width="100%" direction="Column" id="vbox1_copy5">-->
+			<!--						<items>-->
+			<!--							<Text xmlns:core="sap.ui.core" xmlns:uxap="sap.uxap" xmlns:c="sap.suite.ui.commons" xmlns="sap.m"-->
+			<!--								text="Format layout incorrect or best before not used" id="text6_copy7"/>-->
+			<!--						</items>-->
+			<!--					</VBox>-->
+			<!--				</cells>-->
+			<!--			</ColumnListItem>-->
+			<!--		</items>-->
+			<!--		<columns>-->
+			<!--			<Column id="column0">-->
+			<!--				<header>-->
+			<!--					<Label text="Attribute" id="label0_1658501206396"/>-->
+			<!--				</header>-->
+			<!--			</Column>-->
+			<!--			<Column id="column1" >-->
+			<!--				<header >-->
+			<!--					<Label text="Target (Green)" id="label1" class="colhdgr"/>-->
+			<!--				</header>-->
+			<!--			</Column>-->
+			<!--			<Column id="column2_1658501206398" >-->
+			<!--				<header >-->
+			<!--					<Label id="label2" text="Out of Specification(Red)" class="colhdrd"/>-->
+			<!--				</header>-->
+			<!--			</Column>-->
+			<!--		</columns>-->
+			<!--	</Table>-->
 			<!--<IconTabFilter id="ictf5" text="{i18n>RCPTAB.title}" key="RCP" icon="sap-icon://table-view" design="Horizontal">-->
 			<!--	<content>-->
 			<!--	</content>-->
