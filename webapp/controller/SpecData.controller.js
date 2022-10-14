@@ -493,7 +493,8 @@ sap.ui.define([
 							Layout: propinf_resp[i].Layout,
 							Visible: true,
 							PropListId: propinf_resp[i].PropertyListId,
-							propid: null
+							propid: null,
+							grpfilter: propinf_resp[i].GroupFilter
 						};
 						this._aPropInfos.push(prpinfline);
 					}
@@ -713,8 +714,8 @@ sap.ui.define([
 					var sCOMP_TYPE = oPropInfo.instanceInfo.COMP_TYPE;
 
 					switch (sCOMP_TYPE) {
-					case CompType.Qual:
-
+						case CompType.Qual:
+						oInstanceKey.proplistid = oPropInfo.PropListId;
 						oRequest = this.getOwnerComponent().getModelManager().requestForFetchQualByInstanceKey(oInstanceKey);
 						break;
 
@@ -724,7 +725,7 @@ sap.ui.define([
 						break;
 
 					case CompType.Quant:
-
+						oInstanceKey.proplistid = oPropInfo.PropListId;
 						oRequest = this.getOwnerComponent().getModelManager().requestForFetchQuantByInstanceKey(oInstanceKey); //FIXMEVC:implement requestForFetchMultiCompositionByInstanceKey
 						break;
 
@@ -1161,9 +1162,9 @@ sap.ui.define([
 				"ACTN_VP": "0"
 			};
 
-			if (this._aTabControllers.length == 6) {
+			if (this._aTabControllers.length == 5) {
 				// this._rcptab = this._aTabControllers[4];
-				this._aTabControllers.splice(2, 4);
+				this._aTabControllers.splice(2, 3);
 				for (var j = 0; j < this.otab.getSections().length; j++) {
 					if (j > 1) {
 						this.otab.removeSection(this.otab.getSections()[j]);
@@ -1191,8 +1192,8 @@ sap.ui.define([
 				this._oTabControllerIdentifier = new Identifier(this.getOwnerComponent());
 				this._setupTab(this._oTabControllerIdentifier);
 
-				this._oTabControllerQAS = new QAS(this.getOwnerComponent(), this._oSpecificationSUBIDKey, objpgly, this.secondrun);
-				this._setupTab(this._oTabControllerQAS);
+				// this._oTabControllerQAS = new QAS(this.getOwnerComponent(), this._oSpecificationSUBIDKey, objpgly, this.secondrun);
+				// this._setupTab(this._oTabControllerQAS);
 
 				var aTabRequests = this._oTabControllerIdentifier.getInitialRequests(this.oSpecificationkey);
 				var aRequests = [],

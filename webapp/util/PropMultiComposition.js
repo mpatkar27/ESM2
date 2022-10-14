@@ -210,34 +210,44 @@ sap.ui.define([
 			this._valhelp = new Multicompf4(this._oComponent, srcfld, valarr);
 			// this._valhelp = new CharEditCommon(this._oComponent);
 		};
+			var _onvalhelpct = function (oEvent) {
+			var srcfld = oEvent.getSource();
+			var fldval = oEvent.getSource().getValue();
+			var valarr = [];
+			valarr["FIELDNAME"] = "COMPCAT";
+			valarr["FIELDVALUE"] = fldval;
+			this._valhelp = new Multicompf4(this._oComponent, srcfld, valarr);
+			// this._valhelp = new CharEditCommon(this._oComponent);
+		};
 		var headers = oCollection.getAdditional().parent.CompHeader;
 		var valpl = this._oComponent.getI18nBundle().getText("valplev");
 		for (var j = 0; j < headers.length; j++) {
+			var coleditable = headers[j].IsEditable;
 			var label = new sap.m.Label({
 				text: headers[j].ColDescr
 			});
 			if (headers[j].ColId == "COMPAVG") {
 				var textbx = new sap.m.Input({
 					value: "{" + headers[j].ColId + "}",
-					editable: bEditable,
+					editable: bEditable && coleditable,
 					change: _onChange,
 					visible: "{ITOTVALVIS0}"
 				});
 				var textbx1 = new sap.m.Input({
 					value: "{" + headers[j].ColId + "}",
-					editable: bEditable,
+					editable: bEditable && coleditable,
 					change: _onChange,
 					visible: "{ITOTVALVIS1}"
 				});
 				var textbx2 = new sap.m.Input({
 					value: "{" + headers[j].ColId + "}",
-					editable: bEditable,
+					editable: bEditable && coleditable,
 					change: _onChange,
 					visible: "{ITOTVALVIS2}"
 				});
 				var textbx3 = new sap.m.Input({
 					value: "{" + headers[j].ColId + "}",
-					editable: bEditable,
+					editable: bEditable && coleditable,
 					change: _onChange,
 					visible: "{ITOTVALVIS3}"
 				});
@@ -290,7 +300,7 @@ sap.ui.define([
 				} else {
 					var textbx = new sap.m.Input({
 						value: "{" + headers[j].ColId + "}",
-						editable: bEditable,
+						editable:bEditable && coleditable,
 						change: _onChange,
 						valueHelpRequest: jQuery.proxy(_onvalhelp, this),
 						showValueHelp: true
@@ -302,7 +312,8 @@ sap.ui.define([
 					});
 					treetab.addColumn(coltree6);
 				}
-			} else {
+			} else if (headers[j].ColId == "COMP_TYPE") {
+
 				if (!headers[j].IsEditable) {
 					var textbx = new sap.m.Text({
 						text: "{" + headers[j].ColId + "}",
@@ -311,7 +322,28 @@ sap.ui.define([
 				} else {
 					var textbx = new sap.m.Input({
 						value: "{" + headers[j].ColId + "}",
-						editable: bEditable,
+						editable:bEditable && coleditable,
+						change: _onChange,
+						valueHelpRequest: jQuery.proxy(_onvalhelpct, this),
+						showValueHelp: true
+					});
+
+					var coltree6 = new sap.ui.table.Column({
+						label: label,
+						template: textbx
+					});
+					treetab.addColumn(coltree6);
+				}
+			}else {
+				if (!headers[j].IsEditable) {
+					var textbx = new sap.m.Text({
+						text: "{" + headers[j].ColId + "}",
+						wrapping: false
+					});
+				} else {
+					var textbx = new sap.m.Input({
+						value: "{" + headers[j].ColId + "}",
+						editable: bEditable && coleditable,
 						change: _onChange
 					});
 				}

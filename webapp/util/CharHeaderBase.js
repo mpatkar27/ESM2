@@ -167,6 +167,9 @@ sap.ui.define([
 		var aCharValues = [];
 
 		if (!this._bIsMultiValue) {
+			if(this._isCheckBox)
+			var vCharValue=false;
+			else
 			var vCharValue = this._emptyCharValue();
 			aCharValues.push(vCharValue);
 		}

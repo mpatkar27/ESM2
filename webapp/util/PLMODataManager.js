@@ -1361,13 +1361,17 @@ sap.ui.define([
 		if (oInstanceKey.ACTN_VP == null) {
 			oInstanceKey.ACTN_VP = "0";
 		}
+		if (oInstanceKey.proplistid == null) {
+			oInstanceKey.proplistid = "";
+		}
 		var sParams = this._escapeParamsForFI({
 			RECNROOT: oInstanceKey.RECNROOT,
 			ACTN: oInstanceKey.ACTN,
 			RECNPARENT: oInstanceKey.RECNPARENT,
 			ESTCAT: oInstanceKey.ESTCAT,
 			RECN_VP: oInstanceKey.RECN_VP,
-			ACTN_VP: oInstanceKey.ACTN_VP
+			ACTN_VP: oInstanceKey.ACTN_VP,
+			PROPLIST_ID: oInstanceKey.proplistid
 		});
 		var oBatchRequest = this._createBatchOperation("/InstanceQualToCompositionField?" + sParams, "GET");
 		aBatchRequests.push(oBatchRequest);
@@ -1606,13 +1610,18 @@ sap.ui.define([
 		if (oInstanceKey.ACTN_VP == null) {
 			oInstanceKey.ACTN_VP = "0";
 		}
+		if (oInstanceKey.proplistid == null) {
+			oInstanceKey.proplistid = "";
+		}
+		
 		var sParams = this._escapeParamsForFI({
 			RECNROOT: oInstanceKey.RECNROOT,
 			ACTN: oInstanceKey.ACTN,
 			RECNPARENT: oInstanceKey.RECNPARENT,
 			ESTCAT: oInstanceKey.ESTCAT,
 			RECN_VP: oInstanceKey.RECN_VP,
-			ACTN_VP: oInstanceKey.ACTN_VP
+			ACTN_VP: oInstanceKey.ACTN_VP,
+			PROPLIST_ID: oInstanceKey.proplistid
 		});
 
 		var oBatchRequest = this._createBatchOperation("/InstanceQuantToCompositionField?" + sParams, "GET");
@@ -1777,7 +1786,8 @@ sap.ui.define([
 			ESTCAT: oInstanceKey ? oInstanceKey.ESTCAT : "",
 			RECN_VP: oInstanceKey ? oInstanceKey.RECN_VP : "0",
 			ACTN_VP: oInstanceKey ? oInstanceKey.ACTN_VP : "0",
-			RECN: oQual.RECN
+			RECN: oQual.RECN,
+			PROPLIST_ID: ""
 		});
 
 		var oHeaders = {};
@@ -1933,7 +1943,8 @@ sap.ui.define([
 			ESTCAT: oInstanceKey ? oInstanceKey.ESTCAT : "",
 			RECN_VP: oInstanceKey ? oInstanceKey.RECN_VP : "0",
 			ACTN_VP: oInstanceKey ? oInstanceKey.ACTN_VP : "0",
-			RECN: oQuant.RECN
+			RECN: oQuant.RECN,
+			PROPLIST_ID : ""
 		});
 
 		var oHeaders = {};

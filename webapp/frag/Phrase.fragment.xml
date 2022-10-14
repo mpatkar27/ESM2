@@ -2,7 +2,12 @@
 	<uxap:ObjectPageSubSection title="" id="objsecphrase">
 	<!--<core:CustomData>-->
 		<!--<Panel expandable="true" headerText="{propModel>/title}" width="auto" class="sapUiResponsiveMargin" expanded="true">-->
-		<MessageStrip id="msgstrp" text="" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>
+		<!--<MessageStrip id="msgstrp" text="" showIcon="true" class="sapUiMediumMarginBottom"></MessageStrip>-->
+		<VBox>
+	<MessageStrip id="msgstrp" text="" showIcon="true" class="sapUiMediumMarginBottom sapUiResponsiveMargin" visible="false"></MessageStrip>
+	<FormattedText id="msgtxt" visible="false" class=" sapUiResponsiveMargin" htmlText=""></FormattedText>
+	<Text id="msgtxth" visible="false" class="HText sapUiMediumMarginTop sapUiResponsiveMargin"></Text>
+	</VBox>
 	<!--</core:CustomData>-->
 	</uxap:ObjectPageSubSection>
 	<!--</Panel>-->

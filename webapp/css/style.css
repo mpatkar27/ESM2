@@ -323,3 +323,15 @@ height: 10%
 {
 	background: red;
 }
+.HText {
+    display: inline-block;
+    box-sizing: border-box;
+    white-space: pre-line;
+    word-wrap: break-word;
+    cursor: text;
+    font-size: 1.3rem;
+    font-family: "72","72full",Arial,Helvetica,sans-serif;
+    line-height: normal;
+    color: #32363a;
+    font-weight: bold;
+}
