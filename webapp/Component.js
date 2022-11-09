@@ -48,6 +48,8 @@ sap.ui.define([
 			this._oAppModel = new JSONModel();
 			this.setModel(this._oAppModel, "appModel");
 
+			this._oModelcurrusr = new JSONModel("/services/userapi/currentUser");
+			this.setModel(this._oModelcurrusr, "userModel");
 			// Instantiate ODataManager.
 			var oRootPath = jQuery.sap.getModulePath("ESM2"); // your resource root
 
@@ -102,11 +104,10 @@ sap.ui.define([
 			this._oNavigator = oView.getController();
 
 			return oView;
-		},
-			
+		},	
 		createUserModel: function(){
-			var oModel = new JSONModel("/services/userapi/currentUser");
-			return oModel;
+			var oModelusr = new JSONModel("/services/userapi/currentUser");
+			return oModelusr;
 		},
 		getNavigator: function () {
 			assert(this._oNavigator, "oNavigator should be set");

@@ -1897,6 +1897,7 @@ sap.ui.define([
 		// Fetch either composition or composition empty, if needed.
 		var oInstanceAdditional = oAdditional.parent;
 		var oPropertyKey = this.getParentPropertyKeyByInstanceKey(oInstanceKey);
+		oPropertyKey.PROPLIST_ID = oInstanceKey.PROPLIST_ID;
 		var oBackendRequest = null;
 		var aBackendRequests = [];
 
@@ -2004,6 +2005,7 @@ sap.ui.define([
 
 		var oInstanceAdditional = oAdditional.parent; // Instance
 		var oPropertyKey = this.getParentPropertyKeyByInstanceKey(oInstanceKey); // chng 1
+		oPropertyKey.PROPLIST_ID = oInstanceKey.PROPLIST_ID;
 		// var oPropertyKey;
 		// oPropertyKey = {
 		// RECNROOT: oInstanceKey.RECNROOT,
@@ -2179,6 +2181,7 @@ sap.ui.define([
 
 		var oInstanceAdditional = oAdditional.parent; // Instance
 		var oPropertyKey = this.getParentPropertyKeyByInstanceKey(oInstanceKey);
+		oPropertyKey.PROPLIST_ID = oInstanceKey.PROPLIST_ID;
 		var aBackendRequests = [];
 
 		// Fetch group info, if needed.

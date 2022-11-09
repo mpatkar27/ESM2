@@ -7,15 +7,16 @@
 		<Panel id="pnl1" expandable="true" headerText="{i18n>AdvSrchPanel1Title}" width="auto" class="sapUiResponsiveMargin mainToolbar-header"
 			expanded="{dialogModel>/AdvSrchPanel1Expanded}">
 			<content>
+				<MessageStrip text="{i18n>srchmsg}" showIcon="true" class="sapUiMediumMarginBottom sapUiResponsiveMargin"></MessageStrip>
 				<form:Form id="AdvSrchForm" editable="true" width="100%">
 					<form:layout>
-						<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="2" labelSpanM="3" labelSpanS="2"/>
+						<form:ResponsiveGridLayout adjustLabelSpan="true" columnsL="1" labelSpanL="1" columnsM="1" labelSpanM="1" labelSpanS="1"/>
 					</form:layout>
 					<form:formContainers>
 						<form:FormContainer>
 							<form:formElements>
 								<form:FormElement label="{i18n>AdvSrchFormCont1Elm3Label}">
-									<Input id="specdetinp" value="{dialogModel>/aData/0/IDENT1}" width="17rem" submit="_onSpecSearch"/>
+									<Input id="specdetinp" value="{dialogModel>/aData/0/IDENT1}" submit="_onSpecSearch"/>
 								</form:FormElement>
 								<form:FormElement>
 									<Button text="{i18n>AdvSrchBtnSearchTxt}" width="7rem" press="_onSpecSearch"/>

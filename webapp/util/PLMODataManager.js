@@ -177,10 +177,16 @@ sap.ui.define([
 		this._checkSpecificationSUBIDKey(oSpecificationSUBIDKey);
 
 		var sKeyDate = Util.convertDateToString(oSpecificationSUBIDKey.KEYDATE);
+		var userinf = this._oComponent.createUserModel(); 
+		// var userinf = this._oComponent.getModel("userModel").getData();
+		if (!userinf.email) {
+			userinf.email = "";
+		}
 
 		var sParams = this._escapeParamsForFI({
 			SUBID: oSpecificationSUBIDKey.SUBID,
-			KEYDATE: sKeyDate
+			KEYDATE: sKeyDate,
+			SMTP_ADDR: userinf.email
 		});
 
 		var oBatchRequest = this._createBatchOperation("/GetSpecInfo?" + sParams, "GET");
@@ -562,7 +568,8 @@ sap.ui.define([
 				// ID: oPropertyKey.ID,
 				MENID: "",
 				ID: "",
-				ESTCAT: oPropertyKey.ESTCAT
+				ESTCAT: oPropertyKey.ESTCAT,
+				PROPLIST_ID: oPropertyKey.PROPLIST_ID
 			});
 
 			var oBatchRequest = this._createBatchOperation("/GetInstanceList?" + sParams, "GET");
@@ -1286,7 +1293,8 @@ sap.ui.define([
 		var sParams = this._escapeParamsForFI({
 			RECNROOT: oPropertyKey.RECNROOT,
 			ACTN: oPropertyKey.ACTN,
-			ESTCAT: oPropertyKey.ESTCAT
+			ESTCAT: oPropertyKey.ESTCAT,
+			PROPLIST_ID: oPropertyKey.PROPLIST_ID
 		});
 
 		var oBatchRequest = this._createBatchOperation("/GetCompHeader?" + sParams, "GET");
@@ -1361,8 +1369,8 @@ sap.ui.define([
 		if (oInstanceKey.ACTN_VP == null) {
 			oInstanceKey.ACTN_VP = "0";
 		}
-		if (oInstanceKey.proplistid == null) {
-			oInstanceKey.proplistid = "";
+		if (oInstanceKey.PROPLIST_ID == null) {
+			oInstanceKey.PROPLIST_ID = "";
 		}
 		var sParams = this._escapeParamsForFI({
 			RECNROOT: oInstanceKey.RECNROOT,
@@ -1371,7 +1379,7 @@ sap.ui.define([
 			ESTCAT: oInstanceKey.ESTCAT,
 			RECN_VP: oInstanceKey.RECN_VP,
 			ACTN_VP: oInstanceKey.ACTN_VP,
-			PROPLIST_ID: oInstanceKey.proplistid
+			PROPLIST_ID: oInstanceKey.PROPLIST_ID
 		});
 		var oBatchRequest = this._createBatchOperation("/InstanceQualToCompositionField?" + sParams, "GET");
 		aBatchRequests.push(oBatchRequest);
@@ -1379,7 +1387,8 @@ sap.ui.define([
 		var sParams1 = this._escapeParamsForFI({
 			RECNROOT: oInstanceKey.RECNROOT,
 			ACTN: oInstanceKey.ACTN,
-			ESTCAT: oInstanceKey.ESTCAT
+			ESTCAT: oInstanceKey.ESTCAT,
+			PROPLIST_ID: oInstanceKey.PROPLIST_ID
 		});
 
 		var oBatchRequest1 = this._createBatchOperation("/GetCompHeader?" + sParams1, "GET");
@@ -1427,6 +1436,7 @@ sap.ui.define([
 					data["ESTCAT"] = data2[j - 1].ESTCAT;
 					data["KEY_VP"] = data2[j - 1].KEY_VP;
 					modelql[i] = jQuery.extend({}, data);
+					data["PROPLIST_ID"] = data2[j - 1].PROPLIST_ID;
 					i++;
 				}
 				for (var k = 0; k < aCharHeaders.length; k++) {
@@ -1453,6 +1463,7 @@ sap.ui.define([
 				data["SPC_ACTN"] = data2[j - 1].SPC_ACTN;
 				data["ESTCAT"] = data2[j - 1].ESTCAT;
 				data["KEY_VP"] = data2[j - 1].KEY_VP;
+				data["PROPLIST_ID"] = data2[j - 1].PROPLIST_ID;
 				modelql[i] = jQuery.extend({}, data);
 			}
 			var oResponse = {
@@ -1610,8 +1621,8 @@ sap.ui.define([
 		if (oInstanceKey.ACTN_VP == null) {
 			oInstanceKey.ACTN_VP = "0";
 		}
-		if (oInstanceKey.proplistid == null) {
-			oInstanceKey.proplistid = "";
+		if (oInstanceKey.PROPLIST_ID == null) {
+			oInstanceKey.PROPLIST_ID = "";
 		}
 		
 		var sParams = this._escapeParamsForFI({
@@ -1621,7 +1632,7 @@ sap.ui.define([
 			ESTCAT: oInstanceKey.ESTCAT,
 			RECN_VP: oInstanceKey.RECN_VP,
 			ACTN_VP: oInstanceKey.ACTN_VP,
-			PROPLIST_ID: oInstanceKey.proplistid
+			PROPLIST_ID: oInstanceKey.PROPLIST_ID
 		});
 
 		var oBatchRequest = this._createBatchOperation("/InstanceQuantToCompositionField?" + sParams, "GET");
@@ -1630,7 +1641,8 @@ sap.ui.define([
 		var sParams1 = this._escapeParamsForFI({
 			RECNROOT: oInstanceKey.RECNROOT,
 			ACTN: oInstanceKey.ACTN,
-			ESTCAT: oInstanceKey.ESTCAT
+			ESTCAT: oInstanceKey.ESTCAT,
+			PROPLIST_ID: oInstanceKey.PROPLIST_ID
 		});
 
 		var oBatchRequest1 = this._createBatchOperation("/GetCompHeader?" + sParams1, "GET");
@@ -1663,6 +1675,7 @@ sap.ui.define([
 					data["SPC_ACTN"] = data2[j - 1].SPC_ACTN;
 					data["ESTCAT"] = data2[j - 1].ESTCAT;
 					data["KEY_VP"] = data2[j - 1].KEY_VP;
+					data["PROPLIST_ID"] = data2[j - 1].PROPLIST_ID;
 					modelql[i] = jQuery.extend({}, data);
 					i++;
 				}
@@ -1690,6 +1703,7 @@ sap.ui.define([
 				data["SPC_ACTN"] = data2[j - 1].SPC_ACTN;
 				data["ESTCAT"] = data2[j - 1].ESTCAT;
 				data["KEY_VP"] = data2[j - 1].KEY_VP;
+				data["PROPLIST_ID"] = data2[j - 1].PROPLIST_ID;
 				modelql[i] = jQuery.extend({}, data);
 			}
 			var oResponse = {
@@ -3573,7 +3587,16 @@ sap.ui.define([
 				oInstance[oFieldEntry.FIELDNAME] = oFieldEntry.FIELDVALUE; // FIXME: translate propname to avoid javascript built-in name interference!
 			}
 		}
-
+		for (var z=0;z<aInstances.length;z++)
+		{
+			if(!aInstances[z].hasOwnProperty("PROPLIST_ID") && z!=0)
+			{
+				aInstances[z].PROPLIST_ID = aInstances[z-1].PROPLIST_ID;
+			}
+			else if( !aInstances[z].hasOwnProperty("PROPLIST_ID") && z==0){ 
+				aInstances[z].PROPLIST_ID = "";
+			}
+		}
 		return aInstances;
 	};
 

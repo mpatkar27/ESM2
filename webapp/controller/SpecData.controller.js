@@ -547,7 +547,8 @@ sap.ui.define([
 						TEXT: "",
 						ESTCAT: "",
 						Phrkey: phrky,
-						MLC: this._aPropInfos[i].MLC
+						MLC: this._aPropInfos[i].MLC,
+						PROPLIST_ID : this._aPropInfos[i].PropListId
 					};
 				} else {
 					var oTreeNode2 = {
@@ -558,7 +559,8 @@ sap.ui.define([
 						TEXT: oTreeNode.TEXT,
 						ESTCAT: oTreeNode.ESTCAT,
 						Phrkey: phrky,
-						MLC: this._aPropInfos[i].MLC
+						MLC: this._aPropInfos[i].MLC,
+						PROPLIST_ID : this._aPropInfos[i].PropListId
 					};
 
 				}
@@ -642,8 +644,10 @@ sap.ui.define([
 							var aInstances = oCollection.getEntries();
 							// var aInstances = oCollection.entries;
 							assert(aInstances.length > 0, "aInstances.length should be > 0"); //FIXMEVCX:check for status?
-
-							oPropInfo._instanceKey = aInstances[0];
+							var instky = jQuery.extend(true, [], aInstances[0]);
+							instky.PROPLIST_ID = oPropInfo.PropListId;
+							oPropInfo._instanceKey = instky;
+							
 							var instkey = aInstances[0];
 						}
 					} else {
@@ -853,7 +857,7 @@ sap.ui.define([
 								}
 							}
 						}
-					} else if (oPropInfo.Layout == "FORM") {
+					} else if (oPropInfo.Layout == "FORM" && oPropInfo.PhrKey != "udt") {
 						var aCharHeaders = oPropInfo.collection.getAdditional().charHeaderInfo.byOrder;
 						for (var i = aCharHeaders.length - 1; i >= 0; i--) {
 							var oCharHeader = aCharHeaders[i];
