@@ -1,42 +1,31 @@
-specVersion: '1.0'
+specVersion: "2.4"
 metadata:
-  name: specedit
+  name: ESM2
 type: application
-resources:
-  configuration:
-    propertiesFileSourceEncoding: UTF-8
-builder:
-  customTasks:
-    - name: webide-extension-task-updateManifestJson
-      beforeTask: generateManifestBundle
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
       configuration:
-        appFolder: webapp
-        destDir: dist
-    - name: webide-extension-task-updateNeoApp
-      afterTask: generateVersionInfo
+        ignoreCertError: false
+        backend:
+          - path: /sap
+            url: http://sod:443
+            client: "100"
+            destination: SOD
+        ui5:
+          path:
+            - /resources
+            - /test-resources
+          url: https://ui5.sap.com
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
       configuration:
-        destDir: dist
-        appFolder: webapp
-        nameSpace: gramont/vc
-    - name: webide-extension-task-lint
-      afterTask: webide-extension-task-updateNeoApp
+        port: 35729
+        path: webapp
+        delay: 300
+    - name: fiori-tools-preview
+      afterMiddleware: fiori-tools-appreload
       configuration:
-        destDir: dist
-        appFolder: webapp
-        nameSpace: gramont/vc 
-    - name: webide-extension-task-resources
-      afterTask: webide-extension-task-lint
-      configuration:
-        nameSpace: gramont/vc
-    - name: updateIndexHtml
-      afterTask: generateVersionInfo
-
----
-
-specVersion: "1.0"
-kind: extension
-type: task
-metadata:
-  name: updateIndexHtml
-task:
-  path: build/updateIndexHtml.js
+        component: ESM2
+        ui5Theme: sap_fiori_3

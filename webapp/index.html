@@ -1,50 +1,33 @@
-
-<html>
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-		<title>Vendor Connect</title>
-
-		<script id="sap-ui-bootstrap"
-		        src="/resources/sap-ui-core.js"
-				data-sap-ui-theme="sap_fiori_3"
-				data-sap-ui-xx-bindingSyntax="complex"
-				data-sap-ui-libs="sap.m,sap.ui.commons,sap.ui.layout,sap.ui.unified,sap.uxap"
-				data-sap-ui-resourceroots='{"ESM2": "./"}'>
-		</script>
-		<script src="/sap/public/bc/ui2/services/sap/ui2/srvc/error.js"></script>
-
-		<script src="/sap/public/bc/ui2/services/sap/ui2/srvc/utils.js"></script>
-
-		<script src="/sap/public/bc/ui2/shell-api/sap/ui2/shell/startup.js"></script>
-		<script>
-			//FIXMEVC: sync libs with manifest
-			//FIXMEVC: ui5 resource path
-			//FIXMEVC: minimal ui5 version
-			//FIXMEVC: change service url
-			//FIXMEVC: transform to mta/remove neo?/remove build index.html?
-			sap.ui.getCore().attachInit(function() {
-				sap.ui.require([
-					"sap/ui/core/ComponentContainer"
-				], function(ComponentContainer) {
-					"use strict";
-				
-					// Instantiate component.
-					// TODO: switch to manifestfirst+async loading.
-
-					var oComponentContainer = new ComponentContainer({
-						height: "100%",
-						name: "ESM2"
-					});
-
-					oComponentContainer.placeAt("content");
-				});
-			});
-		</script>
-	</head>
-
-	<body class="sapUiBody" id="content">
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<style>
+		html, body, body > div, #container, #container-uiarea {
+			height: 100%;
+		}
+	</style>
+	<script
+			id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_fiori_3"
+			data-sap-ui-resourceroots='{
+            "ESM2": "."
+        }'
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-async="true"
+			data-sap-ui-preload="async"
+			data-sap-ui-libs="sap.m">
+	</script>
+	<script id="locate-reuse-libs" src="./utils/locate-reuse-libs.js"
+			data-sap-ui-manifest-uri="./manifest.json"
+			data-sap-ui-componentName="ESM2">
+	</script>
+</head>
+<body class="sapUiBody sapUiSizeCompact" id="content">
+<div data-sap-ui-component data-name="ESM2" data-id="container" data-settings='{"id" : "ESM2"}' data-handle-validation="true"></div>
+</body>
 </html>
