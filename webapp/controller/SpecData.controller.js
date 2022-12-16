@@ -281,27 +281,27 @@ sap.ui.define([
 		},
 		_logosuccess: function (oLogo) {
 
-			var logod = oLogo.entries;
-			var oLogoKey = {
-				DOKAR: logod[0].DOKAR,
-				DOKNR: logod[0].DOKNR,
-				DOKVR: logod[0].DOKVR,
-				DOKTL: logod[0].DOKTL
-			};
+			// var logod = oLogo.entries;
+			// var oLogoKey = {
+			// 	DOKAR: logod[0].DOKAR,
+			// 	DOKNR: logod[0].DOKNR,
+			// 	DOKVR: logod[0].DOKVR,
+			// 	DOKTL: logod[0].DOKTL
+			// };
 
-			var oLogoKey1 = {
-				DOKAR: logod[1].DOKAR,
-				DOKNR: logod[1].DOKNR,
-				DOKVR: logod[1].DOKVR,
-				DOKTL: logod[1].DOKTL
-			};
-			if (logod[0].DOKAR != "")
-				var sURL = this.getOwnerComponent().getODataManager().getDocDownloadURL(oLogoKey);
-			var sURL1 = this.getOwnerComponent().getODataManager().getDocDownloadURL(oLogoKey1);
-			this.byId("icnspec").setSrc(sURL);
-			this.byId("icnspec1").setSrc(sURL);
+			// var oLogoKey1 = {
+			// 	DOKAR: logod[1].DOKAR,
+			// 	DOKNR: logod[1].DOKNR,
+			// 	DOKVR: logod[1].DOKVR,
+			// 	DOKTL: logod[1].DOKTL
+			// };
+			// if (logod[0].DOKAR != "")
+			// 	var sURL = this.getOwnerComponent().getODataManager().getDocDownloadURL(oLogoKey);
+			// var sURL1 = this.getOwnerComponent().getODataManager().getDocDownloadURL(oLogoKey1);
+			// this.byId("icnspec").setSrc(sURL);
+			// this.byId("icnspec1").setSrc(sURL);
 
-			this.byId("imglog").setSrc(sURL1);
+			// this.byId("imglog").setSrc(sURL1);
 			this._initialFetch(this.oSpecificationkey);
 			// FIXMEVC: what to do in case of error? navigate back?
 		},

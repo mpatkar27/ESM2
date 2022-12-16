@@ -31,18 +31,18 @@ sap.ui.define([
 					urlParameters: {},
 					context: null,
 					success: function (oLogo) {
-						var logod = oLogo.results;
-						var oLogoKey1 = {
-							DOKAR: logod[0].DOKAR,
-							DOKNR: logod[0].DOKNR,
-							DOKVR: logod[0].DOKVR,
-							DOKTL: logod[0].DOKTL
-						};
-						var sURL = that.getOwnerComponent().getComponentConfig().serviceURL + "/DocCollection(DOKAR='" + logod[0].DOKAR + "',DOKNR='" +
-							logod[
-								0].DOKNR + "',DOKVR='" + logod[0].DOKVR +
-							"',DOKTL='" + logod[0].DOKTL + "')/$value";
-						that.getView().byId("imglog").setSrc(sURL);
+						// var logod = oLogo.results;
+						// var oLogoKey1 = {
+						// 	DOKAR: logod[0].DOKAR,
+						// 	DOKNR: logod[0].DOKNR,
+						// 	DOKVR: logod[0].DOKVR,
+						// 	DOKTL: logod[0].DOKTL
+						// };
+						// var sURL = that.getOwnerComponent().getComponentConfig().serviceURL + "/DocCollection(DOKAR='" + logod[0].DOKAR + "',DOKNR='" +
+						// 	logod[
+						// 		0].DOKNR + "',DOKVR='" + logod[0].DOKVR +
+						// 	"',DOKTL='" + logod[0].DOKTL + "')/$value";
+						// that.getView().byId("imglog").setSrc(sURL);
 						// that.getOwnerComponent().getNavigator().releaseBusyDialog();
 					},
 					error: function (oError) {
